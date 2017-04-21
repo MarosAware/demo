@@ -1,2 +1,11 @@
 @import "normalize.css";
 @import "base/_global";
+
+#progress {
+	display:block;
+	overflow:hidden;
+  height: 6px;
+  width:0px;
+  background-color: red;
+  z-index: 500;
+}

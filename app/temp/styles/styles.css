@@ -435,3 +435,12 @@ img {
 	max-width:100%;
 	height:auto;
 }
+
+#progress {
+	display:block;
+	overflow:hidden;
+  height: 6px;
+  width:0px;
+  background-color: red;
+  z-index: 500;
+}
