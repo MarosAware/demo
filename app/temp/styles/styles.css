@@ -1,22 +1,32 @@
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
 
 /* Document
    ========================================================================== */
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
-
 html {
-  line-height: 1.15; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: sans-serif; /* 1 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
 
 /* Sections
    ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
 
 /**
  * Add the correct display in IE 9-.
@@ -98,7 +108,17 @@ a {
 }
 
 /**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
@@ -225,7 +245,8 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Remove the margin in Firefox and Safari.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
@@ -233,7 +254,10 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -290,6 +314,16 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /**
@@ -437,5 +471,65 @@ img {
 }
 
 .large-hero {
+	position:relative;
+	-webkit-clip-path: polygon(40% 0, 100% 0, 100% 91%, 0 100%, 0 4%);
+	        clip-path: polygon(40% 0, 100% 0, 100% 91%, 0 100%, 0 4%);
+}
 
+/*(x y, x y, x y, x y) all clockwise */
+
+.large-hero__text-content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  text-align:center;
+  -webkit-transform:translateY(-50%) translateX(-50%);
+          transform:translateY(-50%) translateX(-50%);
+  height:18.5rem;
+  background-color: rgba(0, 0, 0, .2);
+  -webkit-filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+          filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+}
+
+.large-hero__title {
+  font-size:4.8rem;
+  color:#FFFAF0;
+  margin:0;
+}
+
+.large-hero__subtitle {
+  font-size:2.9rem;
+  color:#FFFAF0;
+  margin:0;
+}
+
+.large-hero__description {
+  color:#FFFAF0;
+  font-size:1.875rem;
+  max-width:31,25rem;
+  font-weight:300;
+  text-shadow:3px 3px 1px rgba(0, 0, 0, .1);
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:20px;
+  margin-bottom:40px;
+}
+
+.btn {
+	background-color:#1E90FF;
+	color:#FFFAF0;
+	text-decoration:none;
+	padding:.75rem 1.1rem; /*(pionowy, poziomy, vertical, horizontal) */
+	box-shadow: 5px 5px 10px rgba(30,144,255, .4);
+}
+
+.btn--crimson {
+  background-color:crimson;
+  box-shadow: 5px 5px 10px rgba(220,20,60, .4);
+}
+
+.btn--large {
+  padding:1rem 1.45rem;
+  font-size:1.2rem;
 }

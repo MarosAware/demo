@@ -125,7 +125,5 @@ var _Gallery2 = _interopRequireDefault(_Gallery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var gallery = new _Gallery2.default();
-
 /***/ })
 /******/ ]);
