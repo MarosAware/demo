@@ -1,6 +1,13 @@
 .large-hero {
 	position:relative;
-	clip-path: polygon(40% 0, 100% 0, 100% 91%, 0 100%, 0 4%); /*(x y, x y, x y, x y) all clockwise */
+	
+	@mixin atLarge {
+		clip-path: polygon(40% 0, 100% 0, 100% 91%, 0 100%, 0 4%); /*(x y, x y, x y, x y) all clockwise */
+	}
+
+	&__image {
+		display:block;
+	}
 
 	&__text-content {
 		position:absolute;
@@ -9,33 +16,52 @@
 		width:100%;
 		text-align:center;
 		transform:translateY(-50%) translateX(-50%);
-		height:18.5rem;
-		background-color: rgba(0, 0, 0, .2);
+		background:linear-gradient(to bottom, rgba(0, 0, 0, .25), rgba(0, 0, 0, .02));
 		filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+
+		@mixin atSmall {
+			height:20rem;
+		}
+
 	}
 
 	&__title {
-		font-size:4.8rem;
+		font-size:2.2rem;
 		color:$mainWhite;
 		margin:0;
+
+		@mixin atSmall {
+			font-size:4.8rem;
+		}
 	}
 
 	&__subtitle {
-		font-size:2.9rem;
+		font-size:1.4rem;
 		color:$mainWhite;
 		margin:0;
+
+		@mixin atSmall {
+			font-size:2.9rem;
+		}
 	}
 
 	&__description {
 		color:$mainWhite;
-		font-size:1.875rem;
-		max-width:31,25rem;
+		font-size:1.1rem;
 		font-weight:300;
 		text-shadow:3px 3px 1px rgba(0, 0, 0, .1);
 		margin-right:auto;
 		margin-left:auto;
-		margin-top:20px;
-		margin-bottom:40px;
+		margin-top:.5rem;
+		margin-bottom:1.3rem;
+		
+
+		@mixin atSmall {
+			font-size:1.875rem;
+			max-width:500px;
+			margin-top:1.25rem;
+			margin-bottom:2.5rem;
+		}
 
 	}
 }

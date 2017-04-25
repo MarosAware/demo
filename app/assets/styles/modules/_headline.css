@@ -1,0 +1,51 @@
+.headline {
+	font-weight:400;
+	font-size:1.9rem;
+	color:$mainBrown;
+
+	strong {
+		font-weight:500;
+	}
+
+	@mixin atSmall {
+		font-size:2.875rem;
+	}
+
+	&--centered {
+		text-align:center;
+	}
+
+	&--blue {
+		color:$mainBlue;
+	}
+
+	&--small {
+		font-size:1.2rem;
+
+		@mixin atSmall {
+			font-size:1.875rem;
+		}
+	}
+
+	&--narrow {
+		max-width:500px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	&--light {
+		font-weight:300;
+	}
+
+	&--b-margin-small {
+		margin-bottom:.5em;
+	}
+
+	&--b-margin-large {
+		margin-bottom:1.6em;
+	}
+
+	&--filter {
+		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .1));
+	}
+}

@@ -1,0 +1,19 @@
+.page-section {
+	padding:2rem 0;
+
+	@mixin atMedium {
+		padding:4.5rem 0;
+	}
+
+	&--silver {
+		background-color:$mainSilver;
+	}
+
+	&--t-padding-small {
+		padding:1.2rem 0;
+
+		@mixin atMedium {
+			padding:2.8rem 0 4.5rem 0;
+		}
+	}
+}
