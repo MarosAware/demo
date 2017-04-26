@@ -14,7 +14,7 @@
 		box-shadow:5px 6px 10px rgba($mainBlue, .4);
 	}
 
-	&--crimson {
+	&--brown {
 		background-color:$mainBrown;
 		&:hover {
 			box-shadow:5px 5px 10px rgba($mainBrown, .4);

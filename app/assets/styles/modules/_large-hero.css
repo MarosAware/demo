@@ -17,7 +17,7 @@
 		text-align:center;
 		transform:translateY(-50%) translateX(-50%);
 		background:linear-gradient(to bottom, rgba(0, 0, 0, .25), rgba(0, 0, 0, .02));
-		filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+		filter:drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
 
 		@mixin atSmall {
 			height:20rem;
@@ -31,6 +31,14 @@
 		margin:0;
 
 		@mixin atSmall {
+			font-size:3.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:4rem;
+		}
+
+		@mixin atLarge {
 			font-size:4.8rem;
 		}
 	}
@@ -41,6 +49,14 @@
 		margin:0;
 
 		@mixin atSmall {
+			font-size:2.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:2.6rem;
+		}
+
+		@mixin atLarge {
 			font-size:2.9rem;
 		}
 	}
@@ -52,15 +68,21 @@
 		text-shadow:3px 3px 1px rgba(0, 0, 0, .1);
 		margin-right:auto;
 		margin-left:auto;
-		margin-top:.5rem;
-		margin-bottom:1.3rem;
+		max-width:30rem;
+		
 		
 
 		@mixin atSmall {
+			font-size:1.3rem;
+			margin-bottom:2.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:1.6rem;
+		}
+
+		@mixin atLarge {
 			font-size:1.875rem;
-			max-width:500px;
-			margin-top:1.25rem;
-			margin-bottom:2.5rem;
 		}
 
 	}

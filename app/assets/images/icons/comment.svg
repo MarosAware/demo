@@ -1,1 +1,15 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#2f5572;}</style></defs><title>comment</title><path class="cls-1" d="M0.72,0.08A0.67,0.67,0,0,0,0,.8V47.28A0.72,0.72,0,0,0,.72,48H48L64,64V0.72A0.67,0.67,0,0,0,63.28,0H0.8Z"/></svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="64" height="64" viewBox="0 0 66.000000 66.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,66.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M0 375 l0 -195 257 0 258 0 72 -72 73 -72 0 267 0 267 -330 0 -330 0
+0 -195z"/>
+</g>
+</svg>
