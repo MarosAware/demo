@@ -2,8 +2,8 @@
 	background-color:$mainBlue;
 	color:$mainWhite;
 	text-decoration:none;
-	padding:.3rem .4rem;
-	font-size:.8rem;
+	padding:.7rem .8rem;
+	font-size:.9rem;
 
 	@mixin atSmall {
 		padding:.75rem 1.1rem;
@@ -11,13 +11,17 @@
 	} /*(pionowy, poziomy, vertical, horizontal) */
 
 	&:hover {
-		box-shadow:5px 6px 10px rgba($mainBlue, .4);
+		box-shadow:4px 4px 10px rgba($mainWhite, .3);
+		background-color:$mainWhite;
+		color:$mainBlue;
 	}
 
 	&--brown {
 		background-color:$mainBrown;
 		&:hover {
-			box-shadow:5px 5px 10px rgba($mainBrown, .4);
+			box-shadow:4px 4px 10px rgba($mainWhite, .3);
+			background-color:$mainWhite;
+			color:$mainBrown;
 		}
 	}
 

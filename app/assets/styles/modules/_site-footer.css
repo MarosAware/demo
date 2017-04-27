@@ -1,0 +1,19 @@
+.site-footer {
+	background-color:$mainGray;
+	color:$mainWhite;
+	padding:.5rem 0;
+	text-align:center;
+	border-bottom:7px solid $mainBlue;
+
+	&__text {
+		font-weight:300;
+		display:block;
+		margin-bottom:1.1rem;
+
+		@mixin atMedium {
+			display:inline-block;
+			margin-bottom:0;
+			margin-right:2.5rem;
+		}
+	}
+}
