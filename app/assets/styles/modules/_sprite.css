@@ -1,0 +1,77 @@
+
+
+.icon {
+	background-image:url('../../assets/images/sprites/svg/sprite-f9438e78.svg');
+}
+
+
+.icon--comment {
+	width:66px;
+	height:66px;
+	background-position: 0 0;
+}
+
+
+
+.icon--desk {
+	width:66px;
+	height:66px;
+	background-position: 50% 0;
+}
+
+
+
+.icon--facebook {
+	width:23.23px;
+	height:44.01px;
+	background-position: 68.53578989529095% 85.71985193843756%;
+}
+
+
+
+.icon--handshake {
+	width:66px;
+	height:66px;
+	background-position: 0 50%;
+}
+
+
+
+.icon--mail {
+	width:66px;
+	height:50px;
+	background-position: 50% 44.5945945945946%;
+}
+
+
+
+.icon--star {
+	width:66px;
+	height:66px;
+	background-position: 100% 0;
+}
+
+
+
+.icon--task {
+	width:66px;
+	height:66px;
+	background-position: 100% 50%;
+}
+
+
+
+.icon--twitter {
+	width:53.78px;
+	height:44.06px;
+	background-position: 45.7634170018028% 85.7476939067169%;
+}
+
+
+
+.icon--user {
+	width:66px;
+	height:66px;
+	background-position: 0 100%;
+}
+
