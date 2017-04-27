@@ -5,8 +5,10 @@
 		padding:4.5rem 0;
 	}
 
-	&--silver {
-		background-color:$mainSilver;
+	&--gray {
+		background-color:$mainGray;
+		border-bottom:7px solid $mainBlue;
+		color:$mainWhite;
 	}
 
 	&--t-padding-small {
