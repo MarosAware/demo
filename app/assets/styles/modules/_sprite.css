@@ -1,14 +1,14 @@
 
 
 .icon {
-	background-image:url('../../assets/images/sprites/svg/sprite-f9438e78.svg');
+	background-image:url('../../assets/images/sprites/svg/sprite-b3a5bafa.svg');
 }
 
 
 .icon--comment {
 	width:66px;
 	height:66px;
-	background-position: 0 0;
+	background-position: 69.72477064220183% 0;
 }
 
 
@@ -16,7 +16,7 @@
 .icon--desk {
 	width:66px;
 	height:66px;
-	background-position: 50% 0;
+	background-position: 0 57.41935483870968%;
 }
 
 
@@ -24,7 +24,7 @@
 .icon--facebook {
 	width:23.23px;
 	height:44.01px;
-	background-position: 68.53578989529095% 85.71985193843756%;
+	background-position: 45.933197837174525% 87.57556924120006%;
 }
 
 
@@ -32,7 +32,15 @@
 .icon--handshake {
 	width:66px;
 	height:66px;
-	background-position: 0 50%;
+	background-position: 30.275229357798164% 57.41935483870968%;
+}
+
+
+
+.icon--logo {
+	width:152px;
+	height:89px;
+	background-position: 0 0;
 }
 
 
@@ -40,7 +48,7 @@
 .icon--mail {
 	width:66px;
 	height:50px;
-	background-position: 50% 44.5945945945946%;
+	background-position: 60.55045871559633% 52.046783625730995%;
 }
 
 
@@ -56,7 +64,7 @@
 .icon--task {
 	width:66px;
 	height:66px;
-	background-position: 100% 50%;
+	background-position: 100% 42.58064516129032%;
 }
 
 
@@ -64,7 +72,7 @@
 .icon--twitter {
 	width:53.78px;
 	height:44.06px;
-	background-position: 45.7634170018028% 85.7476939067169%;
+	background-position: 28.66823038832421% 87.60031649146603%;
 }
 
 

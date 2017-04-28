@@ -2,16 +2,19 @@
 	background-color:$mainBlue;
 	color:$mainWhite;
 	text-decoration:none;
-	padding:.7rem .8rem;
+	padding:.4rem .5rem;
 	font-size:.9rem;
+	display:inline-block;
+
 
 	@mixin atSmall {
-		padding:.75rem 1.1rem;
+		padding:.5rem .65rem; /*(pionowy, poziomy, vertical, horizontal) */
 		font-size:1rem;
-	} /*(pionowy, poziomy, vertical, horizontal) */
+		font-weight:500;
+	} 
 
 	&:hover {
-		box-shadow:4px 4px 10px rgba($mainWhite, .3);
+		box-shadow:4px 4px 5px rgba($mainWhite, .3);
 		background-color:$mainWhite;
 		color:$mainBlue;
 	}
@@ -19,14 +22,14 @@
 	&--brown {
 		background-color:$mainBrown;
 		&:hover {
-			box-shadow:4px 4px 10px rgba($mainWhite, .3);
+			box-shadow:4px 4px 5px rgba($mainWhite, .3);
 			background-color:$mainWhite;
 			color:$mainBrown;
 		}
 	}
 
 	&--large {
-		padding:.6rem .8rem;
+		padding:.7rem .8rem;
 		font-size:.9rem;	
 
 		@mixin atSmall {

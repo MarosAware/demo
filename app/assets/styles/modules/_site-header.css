@@ -1,0 +1,132 @@
+.site-header {
+	padding:12px 0;
+	position:absolute;
+	z-index:2;
+	width:100%;
+	transition:all .3s ease-out;
+
+	&--is-expanded {
+		background-color:rgba($mainGray, .9);
+	}
+
+	@mixin atMedium {
+		background-color:rgba($mainGray, .9);
+	}
+
+	&__btn-container {
+
+		@mixin atMedium {
+			float:right;
+		}
+	}
+
+	&__logo {
+		position:absolute;
+		background-color:$mainGray;
+		padding:5px 30px;
+		top:0;
+		left:50%;
+		transform:translateX(-50%) scale(.7);
+		transform-origin:50% 0;
+
+		@mixin atMedium {
+			left:auto;
+			transform:translateX(0);
+		}
+	}
+
+	&__logo__graphic {
+		text-indent:-9999px;
+	}
+
+	&__menu-icon {
+		width:23px;
+		height:20px;
+		position:absolute;
+		top:10px;
+		right:19px;
+		z-index:10;
+
+		&::before {
+			content:"";
+			position:absolute;
+			top:0;
+			width:23px;
+			height:4px;
+			background-color:$mainBlue;
+			transform-origin:0 0;
+			transition:all .3s ease-out;
+
+		}
+
+		&__middle {
+			position:absolute;
+			top:8px;
+			width:23px;
+			height:4px;
+			background-color:$mainBlue;
+			transform-origin:0 50%;
+			transition:all .3s ease-out;
+		}
+
+		&::after {
+			content:"";
+			position:absolute;
+			bottom:0;
+			width:23px;
+			height:4px;
+			background-color:$mainBlue;
+			transform-origin:0 100%;
+			transition:all .3s ease-out;
+		}
+
+
+		@mixin atMedium {
+			display:none;
+		}
+
+	}
+
+	&__menu-icon--close-x {
+
+		&::before {
+			background-color:$mainWhite;
+			transform:rotate(45deg) scaleX(1.05);
+		}
+
+		.site-header__menu-icon__middle {
+			background-color:$mainWhite;
+			opacity:0;
+			transform:scaleX(0);
+		}
+
+		&::after {
+			background-color:$mainWhite;
+			transform:rotate(-45deg) scaleX(1.05);
+		}
+	}
+
+	&__menu-content {
+		opacity:0;
+		z-index:-10;
+		position:relative;
+		transform:scale(1.1);
+		padding-top:75px;
+		text-align:center;
+		transition:all .3s ease-out;
+
+		@mixin atMedium {
+			opacity:1;
+			z-index:1;
+			padding-top:0;
+			transform:scale(1);
+		}
+
+		&--is-visible {
+			opacity:1;
+			z-index:1;
+			transform:scale(1);
+		}
+	}
+
+}
