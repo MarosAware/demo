@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="150" height="87" viewBox="0 0 500 290">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 62.5px;
+      }
+
+      .cls-2, .cls-4 {
+        text-anchor: middle;
+        font-weight: bold;
+      }
+
+      .cls-2 {
+        font-family: "Arial-BoldMT";
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 200px;
+      }
+
+      .cls-4 {
+        font-family: "BerlinSansFBDemi-Bold";
+      }
+    </style>
+  </defs>
+  <text style="fill:#FFFAF0;" x="251" y="70" class="cls-1"><tspan x="251" class="cls-2">Rachunkowość</tspan></text>
+  <text style="fill:#FFFAF0;" x="249" y="257" class="cls-3"><tspan x="249" class="cls-4">MLG</tspan></text>
+</svg>
