@@ -1,7 +1,7 @@
 .site-header {
-	padding:12px 0;
+	padding:32px 0;
 	position:absolute;
-	z-index:2;
+	z-index:10000;
 	width:100%;
 	transition:all .3s ease-out;
 
@@ -11,12 +11,15 @@
 
 	@mixin atMedium {
 		background-color:rgba($mainGray, .9);
+			display:block;
+			position:relative;
 	}
 
 	&__btn-container {
 
 		@mixin atMedium {
 			float:right;
+			margin-top:-17px;
 		}
 	}
 
@@ -111,7 +114,7 @@
 		z-index:-10;
 		position:relative;
 		transform:scale(1.1);
-		padding-top:75px;
+		padding-top:78px;
 		text-align:center;
 		transition:all .3s ease-out;
 

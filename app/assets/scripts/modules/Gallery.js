@@ -1,39 +1,67 @@
-/*import $ from 'jquery';
+import cycle from 'script-loader!jquery-cycle-2';
+
 
 class Gallery {
 	constructor() {
-		this.cur = $(".large-hero__slide");
-		this.first = $("#first");
-		this.sec = $("#sec");
-		this.last = $("#last");
-		this.next = $(".next");
-		this.back = $(".back");
-		this.events();
+		this.item = $('.main-gallery');
+		this.bar = $('.main-gallery__progress');
+		this.next = $('.main-gallery__next');
+		this.prev = $('.main-gallery__prev');
+		this.pager = $('.main-gallery__pager');
+		this.description = $('.main-gallery__text-content p a');
+		this.startShow();
+		
 	}
 
-	events() {
-		this.back.click(this.backG.bind(this));
-	}
 
-	goNext() {
-		stopG();
-		forwardG();
-		startG();
-	}
 
-	goBack() {
-		stopG();
-		backG();
-		startG();
-	}
 
-	backG() {
-		fadeOut(1000);
+	startShow() {
 
+		this.item.cycle({
+			slides: ".main-gallery__item",
+			loader: "wait",
+			updateView:-1,
+			fx: 'fadeout',
+			speed: 1000,
+			timeout: 5000,
+			next:this.next,
+			prev:this.prev,
+			pager: this.pager,
+			pauseOnHover:this.description,
+			pagerEvent:'click.cycle',
+			pagerActiveClass: 'main-gallery__pager--active',
+			log:false,
+			
+	
+		});
+
+		var that = this;
+
+		var slideshow = that.item;
+		var progress = that.bar;
+
+
+		slideshow.on( 'cycle-initialized cycle-before', function( e, opts ) {
+			progress.stop(true).css( 'width', 0 );
+		});
+
+		slideshow.on( 'cycle-initialized cycle-after ', function( e, opts ) {
+			if ( ! slideshow.is('.cycle-paused') )
+				progress.animate({ width: '100%' }, opts.timeout, 'linear' );
+		});
+
+		slideshow.on( 'cycle-paused', function( e, opts ) {
+			progress.stop(); 
+		});
+
+		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
+			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
+		});
 	}
 
 
 }
 
 
-export default Gallery; */
+export default Gallery; 

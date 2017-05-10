@@ -1,4 +1,5 @@
-loaders:process.traceDeprecation = true; 
+loaders:process.traceDeprecation = true;
+var webpack = require("webpack");
 module.exports = {
 	entry: {
 		App:"./app/assets/scripts/App.js",
@@ -8,6 +9,7 @@ module.exports = {
 		path:__dirname + "/app/temp/scripts",
 		filename:"[name].js"
 	},
+
 	module: {
 		loaders: [
 			{

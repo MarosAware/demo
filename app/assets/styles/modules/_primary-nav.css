@@ -3,6 +3,7 @@
 
 	@mixin atMedium {
 		padding-top:0;
+		margin-top:-7px;
 	}
 
 	&--pull-right {
@@ -26,7 +27,7 @@
 		@mixin atMedium {
 			float:left;
 			display:block;
-			margin-top:9px;
+			margin:0;
 		}
 	}
 

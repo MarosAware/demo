@@ -1,0 +1,179 @@
+.main-gallery {
+	position:relative;
+
+	@mixin atSmall {
+		&:hover .main-gallery__next,
+		&:hover .main-gallery__prev,
+		&:hover .main-gallery__pager {
+			opacity:1;
+		}
+
+	}
+
+
+
+	&__item {
+		position:relative;
+		
+	}
+
+	&__image {
+		display:block;
+	}
+
+	&__text-content {
+		margin-top:15px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:100%;
+		text-align:center;
+		transform:translateY(-50%) translateX(-50%);
+		background:linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .25), rgba(0, 0, 0, .02) );
+		filter:drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+
+		@mixin atSmall {
+			margin-top:0;
+			height:20rem;
+		}
+
+	}
+
+	&__title {
+		font-size:2.2rem;
+		color:$mainWhite;
+		margin:0;
+
+		@mixin atSmall {
+			font-size:3.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:4rem;
+		}
+
+		@mixin atLarge {
+			font-size:4.8rem;
+		}
+	}
+
+	&__subtitle {
+		font-size:1.4rem;
+		color:$mainWhite;
+		margin:0;
+
+		@mixin atSmall {
+			font-size:2.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:2.6rem;
+		}
+
+		@mixin atLarge {
+			font-size:2.9rem;
+		}
+	}
+
+	&__description {
+		color:$mainWhite;
+		font-size:1rem;
+		font-weight:300;
+		text-shadow:3px 3px 1px rgba(0, 0, 0, .1);
+		margin-right:auto;
+		margin-left:auto;
+		max-width:30rem;
+		margin-top:.5rem;
+		margin-bottom:1.7rem;
+		
+		
+
+		@mixin atSmall {
+			font-size:1.3rem;
+			margin-bottom:2.2rem;
+		}
+
+		@mixin atMedium {
+			font-size:1.6rem;
+		}
+
+		@mixin atLarge {
+			font-size:1.875rem;
+		}
+
+	}
+
+
+	&__progress {
+		position:relative;
+		display:block;
+		z-index:1000;
+		background:$mainBlue;
+		height:8px;
+		width:0%;
+
+	}
+
+	&__next {
+		position:absolute;
+		top:30%;
+		right:0;
+		display:block;
+		font-size:3rem;
+		color:$mainWhite;
+		background-color:rgba($mainGray, .4);
+		padding:.5rem 1rem;
+		z-index:1000;
+		cursor:pointer;
+		opacity:0;
+
+	}
+
+
+	&__prev {
+		position:absolute;
+		top:30%;
+		display:block;
+		font-size:3rem;
+		color:$mainWhite;
+		background-color:rgba($mainGray, .4);
+		padding:.5rem 1rem;
+		z-index:1000;
+		cursor:pointer;
+		opacity:0;
+	}
+
+	&__pager {
+		position:absolute;
+		text-align:center;
+		width:100%;
+		display:block;
+		bottom:8px;
+		z-index:1004;
+		max-width:100px;
+		padding:.5rem .7rem;
+		background-color:rgba($mainGray, .8);
+		left:50%;
+		transform:translateX(-50%);
+		opacity:0;
+		
+		span {
+			text-indent:-9999px;
+			display:inline-block;
+			width:15px;
+			height:15px;
+			background-color:$mainWhite;
+			margin:0 5px;
+			cursor:pointer;
+			border-radius:50%;
+
+			&.main-gallery__pager--active {
+				background-color:$mainBlue;
+				border-radius:50%;
+			}
+		}
+	}
+
+	
+
+}
