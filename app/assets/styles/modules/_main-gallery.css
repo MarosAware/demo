@@ -12,8 +12,24 @@
 
 
 
+
+
 	&__item {
 		position:relative;
+
+		&.cycle-slide.cycle-slide-active {
+			.main-gallery__text-content {
+				margin-top:15px;
+				position:absolute;
+				top:50%;
+				left:50%;
+				width:100%;
+				text-align:center;
+				transform:translateY(-50%) translateX(-50%);
+				background:linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .25), rgba(0, 0, 0, .02) );
+				filter:drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+			}
+		}
 		
 	}
 
@@ -24,13 +40,15 @@
 	&__text-content {
 		margin-top:15px;
 		position:absolute;
-		top:50%;
+		top:-999px;
 		left:50%;
 		width:100%;
 		text-align:center;
 		transform:translateY(-50%) translateX(-50%);
 		background:linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .25), rgba(0, 0, 0, .02) );
 		filter:drop-shadow(8px 8px 10px rgba(0, 0, 0, .8));
+		transition:all 1s ease-out;
+
 
 		@mixin atSmall {
 			margin-top:0;

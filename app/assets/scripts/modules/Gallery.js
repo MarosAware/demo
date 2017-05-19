@@ -10,7 +10,6 @@ class Gallery {
 		this.pager = $('.main-gallery__pager');
 		this.description = $('.main-gallery__text-content p a');
 		this.startShow();
-		
 	}
 
 
@@ -34,7 +33,7 @@ class Gallery {
 			log:false,
 			
 	
-		});
+		});	
 
 		var that = this;
 
@@ -58,8 +57,8 @@ class Gallery {
 		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
 			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
 		});
+	
 	}
-
 
 }
 
