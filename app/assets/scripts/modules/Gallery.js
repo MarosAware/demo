@@ -30,7 +30,7 @@ class Gallery {
 			pauseOnHover:this.description,
 			pagerEvent:'click.cycle',
 			pagerActiveClass: 'main-gallery__pager--active',
-			log:true
+			log:false
 			
 		});	
 

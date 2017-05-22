@@ -1,5 +1,5 @@
 .main-gallery {
-	position:relative;
+	position: relative;
 	/*clip-path: polygon(0 0, 100% 0, 100% 98%, 50% 100%, 0 99%, 0 0);*/ /*(x y, x y, x y, x y) all clockwise */
 
 	@mixin atSmall {
@@ -8,20 +8,13 @@
 		&:hover .main-gallery__pager {
 			opacity:1;
 		}
-
 	}
 
-
-
-
-
 	&__item {
-		position:relative;
-
+		position:relative;		
 		&.cycle-slide.cycle-slide-active {
 
 			.main-gallery__text-content {
-				margin-top:15px;
 				position:absolute;
 				top:50%;
 				left:50%;
@@ -41,7 +34,6 @@
 	}
 
 	&__text-content {
-		margin-top:15px;
 		position:absolute;
 		top:50%;
 		left:50%;
@@ -130,7 +122,7 @@
 		display:block;
 		z-index:1000;
 		background:$mainBlue;
-		height:8px;
+		height:7px;
 		width:0%;
 
 	}
@@ -186,7 +178,7 @@
 		text-align:center;
 		width:100%;
 		display:none;
-		bottom:8px;
+		bottom:7px;
 		z-index:0;
 		max-width:100px;
 		padding:.5rem .7rem;

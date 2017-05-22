@@ -1,6 +1,10 @@
 body {
 	font-family: 'Roboto', 'sans-serif';
 	color:#333;
+	@mixin atMedium {
+		padding-top:60px;
+	}
+	
 }
 
 img {
@@ -15,4 +19,5 @@ img {
 a {
 	color:$mainBlue;
 }
+
 
