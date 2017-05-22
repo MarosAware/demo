@@ -23,16 +23,15 @@ class Gallery {
 			updateView:-1,
 			fx: 'fadeout',
 			speed: 1000,
-			timeout: 5000,
+			timeout: 5500,
 			next:this.next,
 			prev:this.prev,
 			pager: this.pager,
 			pauseOnHover:this.description,
 			pagerEvent:'click.cycle',
 			pagerActiveClass: 'main-gallery__pager--active',
-			log:false,
+			log:true
 			
-	
 		});	
 
 		var that = this;
@@ -45,7 +44,7 @@ class Gallery {
 			progress.stop(true).css( 'width', 0 );
 		});
 
-		slideshow.on( 'cycle-initialized cycle-after ', function( e, opts ) {
+		slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
 			if ( ! slideshow.is('.cycle-paused') )
 				progress.animate({ width: '100%' }, opts.timeout, 'linear' );
 		});
@@ -57,6 +56,9 @@ class Gallery {
 		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
 			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
 		});
+
+		this.item.cycle('pause');
+		this.item.cycle('resume');
 	
 	}
 
