@@ -1349,6 +1349,10 @@ a {
     background-color: transparent;
     border: none;
   }
+
+  .primary-nav a.is-current-link {
+    color: GreenYellow;
+  }
 }
 
 .reveal-item {

@@ -23,7 +23,7 @@ class Gallery {
 			updateView:-1,
 			fx: 'fadeout',
 			speed: 1000,
-			timeout: 5500,
+			timeout: 6000,
 			next:this.next,
 			prev:this.prev,
 			pager: this.pager,
@@ -46,7 +46,7 @@ class Gallery {
 
 		slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
 			if ( ! slideshow.is('.cycle-paused') )
-				progress.animate({ width: '100%' }, opts.timeout, 'linear' );
+				progress.animate({ width: '100%' }, opts.timeout, 'swing' );
 		});
 
 		slideshow.on( 'cycle-paused', function( e, opts ) {
@@ -54,7 +54,7 @@ class Gallery {
 		});
 
 		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
-			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
+			progress.animate({ width: '100%' }, timeoutRemaining, 'swing' );
 		});
 
 		this.item.cycle('pause');

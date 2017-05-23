@@ -6,6 +6,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "jquery-cycle-2": "^1.0.3",
+    "jquery-smooth-scroll": "^2.2.0",
     "normalize.css": "^5.0.0",
     "waypoints": "^4.0.1"
   },
