@@ -46,7 +46,7 @@ class Gallery {
 
 		slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
 			if ( ! slideshow.is('.cycle-paused') )
-				progress.animate({ width: '100%' }, opts.timeout, 'swing' );
+				progress.animate({ width: '100%' }, opts.timeout, 'linear' );
 		});
 
 		slideshow.on( 'cycle-paused', function( e, opts ) {
@@ -54,7 +54,7 @@ class Gallery {
 		});
 
 		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
-			progress.animate({ width: '100%' }, timeoutRemaining, 'swing' );
+			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
 		});
 
 		this.item.cycle('pause');

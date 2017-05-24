@@ -55,7 +55,7 @@
 			border:none;
 
 			&.is-current-link {
-				color:GreenYellow;
+				color:$mainGreen;
 			}
 		}
 	}
