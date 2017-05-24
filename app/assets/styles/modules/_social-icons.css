@@ -1,0 +1,56 @@
+.social-icons {
+	text-align: center;
+
+
+	&__item {
+		position: relative;
+		max-width: 350px;
+		height:100px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&__link {
+		display:inline-block;
+		position:absolute;
+		left:110px;
+		bottom:30px;
+		text-decoration:none;
+		padding:5px 5px;
+		font-weight:500;
+
+		&:hover {
+			color:$mainBrown;
+		}
+	}
+
+	&__icon	{
+		background-color:$mainBlue;
+		display:inline-block;
+		margin:0 5px 5px 5px;
+		width:33%;
+		height:72px;
+		position:relative;
+
+		@mixin atSmall {
+			width:72px;
+			margin:0 5px;
+		}
+
+		.icon {
+			display:block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+	}
+
+	&__icon--no-bg {
+		background-color: transparent;
+		display:inline-block;
+		position:absolute;
+		left:20px;
+		margin:25px auto 0 auto;
+	}
+}

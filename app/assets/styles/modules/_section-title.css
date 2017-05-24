@@ -17,6 +17,27 @@
 		color:$mainWhite;
 	}
 
+	&--gray {
+		color:$mainGray;
+	}
+
+	&--less-margin {
+		margin-bottom:0;
+		margin-top:0;
+
+		@mixin atSmall {
+			margin-bottom:1rem;
+		}
+	}
+
+	&--small-font {
+		font-size:1.6rem;
+
+		@mixin atSmall {
+			font-size:3.75rem;
+		}
+	}
+
 	&__icon {
 		display:block;
 		margin-left:auto;
