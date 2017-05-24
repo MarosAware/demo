@@ -70,6 +70,10 @@
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
+	var _ScrollTop = __webpack_require__(12);
+
+	var _ScrollTop2 = _interopRequireDefault(_ScrollTop);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var gallery = new _Gallery2.default();
@@ -78,6 +82,7 @@
 	var revealOnScroll = new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 	var stickyHeader = new _StickyHeader2.default();
 	var modal = new _Modal2.default();
+	var scrollTop = new _ScrollTop2.default();
 
 /***/ },
 /* 1 */
@@ -11356,17 +11361,27 @@
 		function StickyHeader() {
 			_classCallCheck(this, StickyHeader);
 
+			this.lazyImages = (0, _jquery2.default)('.lazyload');
 			this.siteHeader = (0, _jquery2.default)('.site-header');
 			this.headerTriggerElement = (0, _jquery2.default)('.page-section--gray');
 			this.pager = (0, _jquery2.default)('.main-gallery__prev');
 			this.pageSections = (0, _jquery2.default)('.page-section');
 			this.headerLinks = (0, _jquery2.default)('.primary-nav a');
-			this.createHeaderWaypoint();
 			this.createPageSectionWaypoints();
+			this.createLogoWaypoint();
+			this.createHeaderWaypoint();
 			this.addSmoothScrolling();
+			this.refreshWaypoints();
 		}
 
 		_createClass(StickyHeader, [{
+			key: 'refreshWaypoints',
+			value: function refreshWaypoints() {
+				this.lazyImages.on('load', function () {
+					Waypoint.refreshAll();
+				});
+			}
+		}, {
 			key: 'addSmoothScrolling',
 			value: function addSmoothScrolling() {
 				this.headerLinks.smoothScroll();
@@ -11383,9 +11398,14 @@
 						} else {
 							that.siteHeader.removeClass("site-header--white");
 						}
-					}
+					},
+					offset: "20%"
 				});
-
+			}
+		}, {
+			key: 'createLogoWaypoint',
+			value: function createLogoWaypoint() {
+				var that = this;
 				new Waypoint({
 					element: this.pager[0],
 					handler: function handler(direction) {
@@ -11872,6 +11892,88 @@
 	}();
 
 	exports.default = Modal;
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _noframework = __webpack_require__(8);
+
+	var _noframework2 = _interopRequireDefault(_noframework);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var ScrollTop = function () {
+		function ScrollTop() {
+			_classCallCheck(this, ScrollTop);
+
+			this.scrollBtn = (0, _jquery2.default)('.btn__scroll');
+			this.gallery = (0, _jquery2.default)('.main-gallery__item');
+			this.colorTriggerElement = (0, _jquery2.default)('.generic-content-container');
+			this.scrollShow();
+			this.scrollColor();
+			this.event();
+		}
+
+		_createClass(ScrollTop, [{
+			key: 'event',
+			value: function event() {
+				this.scrollBtn.click(this.scrollFunction);
+			}
+		}, {
+			key: 'scrollShow',
+			value: function scrollShow() {
+				var that = this;
+				window.onscroll = function () {
+					if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
+						that.scrollBtn.addClass('btn__scroll--is-visible');
+					} else {
+						that.scrollBtn.removeClass('btn__scroll--is-visible');
+					}
+				};
+			}
+		}, {
+			key: 'scrollColor',
+			value: function scrollColor() {
+				var that = this;
+				new Waypoint({
+					element: that.colorTriggerElement[0],
+					handler: function handler(direction) {
+						if (direction == "down") {
+							that.scrollBtn.addClass("btn__scroll--color");
+						} else {
+							that.scrollBtn.removeClass("btn__scroll--color");
+						}
+					},
+					offset: "23%"
+				});
+			}
+		}, {
+			key: 'scrollFunction',
+			value: function scrollFunction() {
+				(0, _jquery2.default)("html, body").animate({ scrollTop: 0 }, "slow");
+				document.documentElement.scrollTop = 0;
+			}
+		}]);
+
+		return ScrollTop;
+	}();
+
+	exports.default = ScrollTop;
 
 /***/ }
 /******/ ]);
