@@ -7,7 +7,7 @@
 	display:inline-block;
 
 	&__scroll {
-		opacity:0;
+		display:none;
 
 		@mixin atLarge {
 			position:fixed;
@@ -26,8 +26,8 @@
 
 
 			&--is-visible {
-				opacity:1;
 				display:block;
+				opacity:1;
 
 			}
 		}
