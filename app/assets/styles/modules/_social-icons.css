@@ -13,10 +13,10 @@
 	&__link {
 		display:inline-block;
 		position:absolute;
-		left:110px;
-		bottom:30px;
+		left:100px;
+		bottom:25px;
 		text-decoration:none;
-		padding:5px 5px;
+		padding:10px 10px;
 		font-weight:500;
 
 		&:hover {

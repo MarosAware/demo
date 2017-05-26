@@ -6,6 +6,37 @@
 	font-size:.9rem;
 	display:inline-block;
 
+	&__scroll {
+		display:none;
+
+		@mixin atLarge {
+			position:fixed;
+			opacity:0;
+			bottom:6rem;
+			right:6rem;
+			z-index:100;
+			border:none;
+			outline:none;
+			background-color:rgba($mainGray, .4);
+			color:$mainGray;
+			cursor: pointer;
+			padding:5px 10px 10px 10px;
+			border-radius:10px;
+			font-size:2rem;
+
+
+			&--is-visible {
+				display:block;
+				opacity:1;
+
+			}
+		}
+
+	}
+
+	&__scroll--color {
+		background-color:rgba($mainWhite, .99);
+	}
 
 	@mixin atSmall {
 		padding:.5rem .65rem; /*(pionowy, poziomy, vertical, horizontal) */
