@@ -4,6 +4,10 @@
 	background-image:url('../../assets/images/sprites/svg/sprite-bbf7c593.svg');
 }
 
+.no-svg .icon {
+	background-image:url('../../assets/images/sprites/svg/sprite-bbf7c593.png');
+}
+
 
 .icon--comment {
 	width:66px;
